@@ -134,9 +134,10 @@ class TableLayoutElement extends LayoutElement {
           }
           cells.add(GridPlacement(
             child: Container(
-              width: constraints.maxWidth / columnMax ??
-                  child.style.width ??
-                  double.infinity,
+              width: child.style.width ?? constraints.maxWidth / columnMax
+              //  ??
+              // double.infinity
+              ,
               height: child.style.height,
               padding: child.style.padding?.nonNegative ??
                   row.style.padding?.nonNegative,
